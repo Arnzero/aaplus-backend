@@ -9,7 +9,7 @@ app.get('/', (req, res) =>
 {
     res.send("Welcome");
 });
-app.get('jtest', async(req, rest) =>
+app.get('/jtest', async(req, rest) =>
 {
     myObj = { "id":"secured", "cash":"0", "billionaire":null};
     res.send(myObj);
