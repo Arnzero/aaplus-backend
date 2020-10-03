@@ -9,10 +9,17 @@ app.get('/', (req, res) =>
 {
     res.send("Welcome");
 });
-app.get('/jtest', async(req, rest) =>
+app.get('/jtest', (req, rest) =>
 {
-    myObj = { "id":"secured", "cash":"0", "billionaire":null};
+    var myObj = { "id":"secured", "cash":"0", "valid":"null"};
     res.send(myObj);
+});
+
+app.get('/jtestStr', (req, rest) =>
+{
+    var myObj = { "id":"secured", "cash":"0", "valid":"null"};
+    var myJSON = JSON.stingify(myObj);
+    res.send(myJSON);
 });
 
 app.get('/login', async (req, res) =>
